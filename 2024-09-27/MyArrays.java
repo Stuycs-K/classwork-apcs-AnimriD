@@ -7,5 +7,15 @@ public class MyArrays{
     }
     returnable += nums[nums.length-1] + "]";
     return returnable;
-    }
+  }
+  public static int[] returnCopy(int[] ary){
+
+  }
+  public static int[] concatArray(int[]ary1, int[]ary2){
+
+  }
+  public static void main(String[] args){
+    System.out.println(arrayToString({1,2,3}));
+    System.out.println()
+  }
 }
