@@ -1,5 +1,5 @@
 public class MyArrays{
-  public String arrayToString(int[]nums){
+  public static String arrayToString(int[]nums){
     String returnable = "[";
     for(int x = 0; x < nums.length - 1;x++){
       String add = "" + nums[x];
@@ -28,5 +28,13 @@ public class MyArrays{
   public static void main(String[] args){
     int [] arr = {1,2,3};
     System.out.println(arr);
+    String a = arrayToString(arr);
+    System.out.println(a);
+    int [] arr2 = returnCopy(arr);
+    String b = arrayToString(arr2);
+    System.out.println("Expected: false and true " + (arr==arr2) + " and " + b.equals(a));
+    int [] arr3 = concatArray(arr,arr2);
+    String c = arrayToString(arr3);
+    System.out.println("Expected: {1,2,3,1,2,3}" + c);
   }
 }
