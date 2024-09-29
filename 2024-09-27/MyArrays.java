@@ -9,10 +9,21 @@ public class MyArrays{
     return returnable;
   }
   public static int[] returnCopy(int[] ary){
-    int[] returnable =
+    int[] returnable = new int[ary.length];
+    for(int counter = 0; counter < ary.length; counter++){
+      returnable[counter] = ary[counter];
+    }
+    return returnable;
   }
   public static int[] concatArray(int[]ary1, int[]ary2){
-
+    int[] returnable = new int[ary.length + ary2.length];
+    for(int counter = 0; counter < ary1.length; counter++){
+      returnable[counter] = ary1[counter];
+    }
+    for(int x = 0; x < ary2.length; x++){
+      returnable[x + ary.length] = ary2[x];
+    }
+    return returnable;
   }
   public static void main(String[] args){
     arrayToString({1,2,3});
