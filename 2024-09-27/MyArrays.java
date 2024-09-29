@@ -21,7 +21,7 @@ public class MyArrays{
       returnable[counter] = ary1[counter];
     }
     for(int x = 0; x < ary2.length; x++){
-      returnable[x + ary.length] = ary2[x];
+      returnable[x + ary1.length] = ary2[x];
     }
     return returnable;
   }
