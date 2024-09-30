@@ -28,7 +28,13 @@ public class ArrayMethods{
 
   /*Return the sum of all of the values in the 2D array */
   public static int arr2DSum(int[][]nums){
-    //use a nested loop to solve this
+    int sum = 0;
+    for(int i = 0; i < ary.length; i++){
+      for(int x = 0; x <ary[i].length; x++){
+        sum += ary[i][x];
+      }
+    }
+    return sum;
   }
 
   /**Rotate an array by returning a new array with the rows and columns swapped.
@@ -39,6 +45,7 @@ public class ArrayMethods{
     return new int[1][1];
   }
   public static void man(String[] args){
-    System.out.println("")
+    int[][] test = new int[5][5];
+    System.out.println(arrToString(test));
   }
 }
