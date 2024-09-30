@@ -45,7 +45,8 @@ public class ArrayMethods{
     return new int[1][1];
   }
   public static void main(String[] args){
-    int[][] test = new int[5][5];
+    int[][] test;
+    test = new int[][] {{3, 4, 5, 6}, {28, 3, 54, 7}, {69}};
     System.out.println(arrToString(test));
   }
 }
