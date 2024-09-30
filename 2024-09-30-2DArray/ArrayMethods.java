@@ -18,8 +18,12 @@ public class ArrayMethods{
     * previous code, but you should NOT duplicate that code. (Don't copy/paste or retype it)
     */
   public static String arrToString(int[][]ary){
-    //this should use arrToString(int[])
-    return "";
+    String returnable = "[";
+    for (int i = 0; i < ary.length; i++) {
+      returnable += arrayToString(ary[i]);
+    }
+    returnable += "]";
+    return returnable;
   }
 
   /*Return the sum of all of the values in the 2D array */
@@ -33,5 +37,8 @@ public class ArrayMethods{
     */
   public static int[][] swapRC(int[][]nums){
     return new int[1][1];
+  }
+  public static void man(String[] args){
+    System.out.println("")
   }
 }
