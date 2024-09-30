@@ -44,7 +44,7 @@ public class ArrayMethods{
   public static int[][] swapRC(int[][]nums){
     return new int[1][1];
   }
-  public static void man(String[] args){
+  public static void main(String[] args){
     int[][] test = new int[5][5];
     System.out.println(arrToString(test));
   }
