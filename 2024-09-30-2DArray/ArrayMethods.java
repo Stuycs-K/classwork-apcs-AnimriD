@@ -51,8 +51,25 @@ public class ArrayMethods{
     return returnable;
   }
   public static void main(String[] args){
-    int[][] test;
-    test = new int[][] {{3, 4, 5, 6}, {28, 3, 54, 7}, {69}};
-    System.out.println(arrToString(test));
+    int[][] test1 = new int[][] {{3, 4, 5, 6}, {28, 3, 54, 7}, {69}};
+    System.out.println(arrToString(test1));
+
+    int[][] test2 = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};  
+    String s = arrToString(test2);  
+    System.out.println(s);
+
+    int x = arr2DSum(test2);  
+    System.out.println(x);
+
+    int[][] swapped = swapRC(test2);  
+    String y = arrToString(swapped); 
+    System.out.println(y);
+
+    int[][] test3 = new int[][]{{306,232,333}, {232,306,212}};
+    int[][] swapped1 = swapRC(test3);
+    String z = arrToString(swapped1);
+    int m = arr2DSum(test3);
+    System.out.println(m);
+    System.out.println(z);
   }
 }
