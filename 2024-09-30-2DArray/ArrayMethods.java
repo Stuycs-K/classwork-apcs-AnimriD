@@ -55,7 +55,7 @@ public class ArrayMethods{
   //-When the row number is the same as the column number replace
   //that negative with the value 1
   //-All other negatives replace with 0
-  public static void replaceNegative(int[][] vals){
+  public static int[][] replaceNegative(int[][] vals){
     for(int x = 0; x < vals.length;x++){
       for(int y = 0; y <vals[x].length; y++){
         if (x == y && vals[x][y] < 0){
