@@ -86,7 +86,7 @@ public class ArrayMethods{
     for(int x = 0; x < nums.length; x++){
       nums2[x] = helper(nums[x]);
     }
-    return nums2
+    return nums2;
   }
   public static void main(String[] args){
     int[][] test1 = new int[][] {{3, 4, 5, 6}, {28, 3, 54, 7}, {69}};
@@ -115,9 +115,9 @@ public class ArrayMethods{
 
     int[][] test5 = new int[][] {{1,2,3}, {4,5,6}, {7,8,9}};
     String abc = arrToString(test5);
-    bcd = copy(test5);
+    int[][] bcd = copy(test5);
     String jba = arrToString(bcd);
     System.out.println("Expected different" + test5 + " " + bcd  + "Expected same " + abc.equals(jba));
-    
+
   }
 }
