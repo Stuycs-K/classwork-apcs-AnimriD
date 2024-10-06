@@ -74,13 +74,20 @@ public class ArrayMethods{
   //DO NOT use any built in methods that "copy" an array.
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
-  /*
+  public static int[] helper(int[] nums){
+    int [] copy = new int [nums.length];
+    for(int x = 0; x < nums.length; x++){
+      copy[x] = nums[x];
+    }
+    return copy;
+  }
   public static int[][] copy(int[][] nums){
     int[][] nums2 = new int[nums.length][];
-    int count = 0;
-    return null;//placeholder so it compiles
+    for(int x = 0; x < nums.length; x++){
+      nums2[x] = helper(nums[x]);
+    }
+    return nums2
   }
-  */
   public static void main(String[] args){
     int[][] test1 = new int[][] {{3, 4, 5, 6}, {28, 3, 54, 7}, {69}};
     System.out.println(arrToString(test1));
