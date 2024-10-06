@@ -111,7 +111,7 @@ public class ArrayMethods{
     System.out.println(z);
 
     int[][] test4 = new int[][] {{3, -4, -5}, {2,-3}, {-1}};
-    System.out.println(replaceNegative(test4));
+    System.out.println(arrToString(replaceNegative(test4)));
 
     int[][] test5 = new int[][] {{1,2,3}, {4,5,6}, {7,8,9}};
     String abc = arrToString(test5);
