@@ -23,8 +23,14 @@ public class ArrayDemo{
   //as long as the parameters are different! (type and/or quantity must be different)
   //Pro tip: you should be using your 1D arrToString in this method!
   public static String arrToString(int[][]ary){
-    return "";
+    String returnable = "[";
+    for (int i = 0; i < ary.length; i++) {
+      returnable += arrayToString(ary[i]);
+    }
+    returnable += "]";
+    return returnable;
   }
+
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
