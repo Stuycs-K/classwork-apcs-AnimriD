@@ -5,8 +5,8 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-    int[][] test1 = new int {{1,2,3,4}, {5,6,7}, {8, 9}, {10}};
-    int[][] test2 = new int {{-1,2,-3,4}, {-5,6,-7}, {8, -9}, {10, 0}};
+    int[][] test1 = new int[][] {{1,2,3,4}, {5,6,7}, {8, 9}, {10}};
+    int[][] test2 = new int[][] {{-1,2,-3,4}, {-5,6,-7}, {8, -9}, {10, 0}};
     System.out.println("Expected true: " + Arrays.toString(test1).equals(arrToString(test1)));
     System.out.println("Expected true: " + Arrays.toString(test2).equals(arrToString(test2)));
     System.out.println("Expected 0: " + Arrays.toString(countZeros2D(test1)));
@@ -19,8 +19,8 @@ public class ArrayDemo{
     System.out.println("Expected false: " + copy(test2) == test2 + "Expected true: " + Arrays.toString(copy(test2)).equals(Arrays.toString(test2)));
     System.out.println(Arrays.toString(swapRC(test1)));
     System.out.println(Arrays.toString(swapRC(test2)));
-    System.out.println(Arrays.toString(htmlTable(test1)));
-    System.out.println(Arrays.toString(htmlTable(test2)));
+    System.out.println(htmlTable(test1));
+    System.out.println(htmlTable(test2));
     test1 = new int[][] {{1,2,3,4},{5,6,7}, {8,9}, {10}};
   }
 
@@ -136,12 +136,12 @@ public class ArrayDemo{
     String html = "<table><tr>";
     for(int x = 0; x < nums.length; x++){
       for(int y = 0; y <nums[x].length; y++){
-        String new = arrToString(nums[x][y]);
         html += "<td>";
-        html += new;
+        html += arrToString(nums[x][y]);
         html += "</td>";
       }
     }
   html += "</tr></table>";
   return html;
+  }
 }
