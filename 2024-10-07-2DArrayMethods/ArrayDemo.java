@@ -5,7 +5,23 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-
+    int[][] test1 = new int {{1,2,3,4}, {5,6,7}, {8, 9}, {10}};
+    int[][] test2 = new int {{-1,2,-3,4}, {-5,6,-7}, {8, -9}, {10, 0}};
+    System.out.println("Expected true: " + Arrays.toString(test1).equals(arrToString(test1)));
+    System.out.println("Expected true: " + Arrays.toString(test2).equals(arrToString(test2)));
+    System.out.println("Expected 0: " + Arrays.toString(countZeros2D(test1)));
+    System.out.println("Expected 1: " + Arrays.toString(countZeros2D(test2)));
+    System.out.println("Expected 55: " + Arrays.toString(arr2DSum(test1)));
+    System.out.println("Expected : " + Arrays.toString(arr2DSum(test2)));
+    System.out.println(Arrays.toString(replaceNegative(test1)));
+    System.out.println(Arrays.toString(replaceNegative(test2)));
+    System.out.println("Expected false: " + copy(test1) == test1 + "Expected true: " + Arrays.toString(copy(test1)).equals(Arrays.toString(test1)));
+    System.out.println("Expected false: " + copy(test2) == test2 + "Expected true: " + Arrays.toString(copy(test2)).equals(Arrays.toString(test2)));
+    System.out.println(Arrays.toString(swapRC(test1)));
+    System.out.println(Arrays.toString(swapRC(test2)));
+    System.out.println(Arrays.toString(htmlTable(test1)));
+    System.out.println(Arrays.toString(htmlTable(test2)));
+    test1 = new int[][] {{1,2,3,4},{5,6,7}, {8,9}, {10}};
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -76,7 +92,6 @@ public class ArrayDemo{
         }
       }
     }
-    return vals;
   }
 
   //4. Make a copy of the given 2d array.
