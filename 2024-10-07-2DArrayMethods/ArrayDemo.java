@@ -24,9 +24,11 @@ public class ArrayDemo{
   //Pro tip: you should be using your 1D arrToString in this method!
   public static String arrToString(int[][]ary){
     String returnable = "[";
-    for (int i = 0; i < ary.length; i++) {
+    for (int i = 0; i < ary.length - 1; i++) {
       returnable += arrayToString(ary[i]);
+      returnable += ",";
     }
+    returnable += arrayToString(ary[ary.length - 1]);
     returnable += "]";
     return returnable;
   }
