@@ -9,27 +9,29 @@ public class ArrayDemo{
     int[][] test2 = new int[][] {{-1,2,-3,4}, {-5,6,-7}, {8, -9}, {10, 0}};
     System.out.println("Expected true: " + Arrays.toString(test1).equals(arrToString(test1)));
     System.out.println("Expected true: " + Arrays.toString(test2).equals(arrToString(test2)));
-    System.out.println("Expected 0: " + Arrays.toString(countZeros2D(test1)));
-    System.out.println("Expected 1: " + Arrays.toString(countZeros2D(test2)));
-    System.out.println("Expected 55: " + Arrays.toString(arr2DSum(test1)));
-    System.out.println("Expected : " + Arrays.toString(arr2DSum(test2)));
-    System.out.println(Arrays.toString(replaceNegative(test1)));
-    System.out.println(Arrays.toString(replaceNegative(test2)));
-    System.out.println("Expected false: " + copy(test1) == test1 + "Expected true: " + Arrays.toString(copy(test1)).equals(Arrays.toString(test1)));
-    System.out.println("Expected false: " + copy(test2) == test2 + "Expected true: " + Arrays.toString(copy(test2)).equals(Arrays.toString(test2)));
+    System.out.println("Expected 0: " + countZeros2D(test1));
+    System.out.println("Expected 1: " + countZeros2D(test2));
+    System.out.println("Expected 55: " + arr2DSum(test1));
+    System.out.println("Expected 10: " + arr2DSum(test2));
+    System.out.println("Before replaceNegative test1: " + arrToString(test1));
+    replaceNegative(test1);
+    System.out.println("After replaceNegative test1: " + arrToString(test1)); 
+    System.out.println("Before replaceNegative test2: " + arrToString(test2));
+    replaceNegative(test2);
+    System.out.println("After replaceNegative test2: " + arrToString(test2));
+    System.out.println("Expected false: " + (copy(test1) == test1) + " Expected true: " + Arrays.toString(copy(test1)).equals(Arrays.toString(test1)));
+    System.out.println("Expected false: " + (copy(test2) == test2) + " Expected true: " + Arrays.toString(copy(test2)).equals(Arrays.toString(test2)));
     System.out.println(Arrays.toString(swapRC(test1)));
     System.out.println(Arrays.toString(swapRC(test2)));
     System.out.println(htmlTable(test1));
     System.out.println(htmlTable(test2));
-    test1 = new int[][] {{1,2,3,4},{5,6,7}, {8,9}, {10}};
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
-  public static String arrayToString(int[]nums){
+  public static String arrToString(int[]nums){
     String returnable = "[";
     for(int x = 0; x < nums.length - 1;x++){
-      String add = "" + nums[x];
-      returnable = returnable + add + ", ";
+      returnable+= nums[x] + ",";
     }
     returnable += nums[nums.length-1] + "]";
     return returnable;
@@ -41,11 +43,9 @@ public class ArrayDemo{
   public static String arrToString(int[][]ary){
     String returnable = "[";
     for (int i = 0; i < ary.length - 1; i++) {
-      returnable += arrayToString(ary[i]);
-      returnable += ",";
+      returnable += arrToString(ary[i]) + ",";
     }
-    returnable += arrayToString(ary[ary.length - 1]);
-    returnable += "]";
+    returnable += arrToString(ary[ary.length - 1]) + "]";
     return returnable;
   }
 
@@ -55,7 +55,7 @@ public class ArrayDemo{
     int count = 0;
     for(int counter = 0; counter < nums.length; counter ++){
       for(int countx = 0; countx < nums[counter].length; countx++){
-        if (nums[counter][countx]){
+        if (nums[counter][countx] == 0){
           count ++;
         }
       }
@@ -137,7 +137,7 @@ public class ArrayDemo{
     for(int x = 0; x < nums.length; x++){
       for(int y = 0; y <nums[x].length; y++){
         html += "<td>";
-        html += arrToString(nums[x][y]);
+        html += nums[x][y];
         html += "</td>";
       }
     }
