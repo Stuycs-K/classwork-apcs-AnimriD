@@ -5,10 +5,10 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-    int[][] test1 = new int[][] {{1,2,3,4}, {5,6,7}, {8, 9}, {10}};
-    int[][] test2 = new int[][] {{-1,2,-3,4}, {-5,6,-7}, {8, -9}, {10, 0}};
-    System.out.println("Expected true: " + Arrays.toString(test1).equals(arrToString(test1)));
-    System.out.println("Expected true: " + Arrays.toString(test2).equals(arrToString(test2)));
+    int[][] test1 = new int[][] {{1,2,3}, {5,6,7}, {4,8, 9}, {10,0,-1}};
+    int[][] test2 = new int[][] {{-1,2,-3}, {-5,6,-7}, {8, -9, 4}, {10, 0, -5}};
+    System.out.println("Expected true: " + Arrays.toString(test1) + " "+ (arrToString(test1)));
+    System.out.println("Expected true: " + Arrays.toString(test2) + " "+ (arrToString(test2)));
     System.out.println("Expected 0: " + countZeros2D(test1));
     System.out.println("Expected 1: " + countZeros2D(test2));
     System.out.println("Expected 55: " + arr2DSum(test1));
