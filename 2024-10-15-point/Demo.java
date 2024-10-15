@@ -5,7 +5,9 @@ public class Demo{
   to the others.
   */
   public static double distance(Point a, Point b){
-    return 0.0;
+    double square = Math.pow(a,2) + Math.pow(b,2);
+    double answer = Math.sqrt(square);
+    return answer;
   }
 
   public static void main(String[]args){
