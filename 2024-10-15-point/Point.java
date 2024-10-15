@@ -30,7 +30,7 @@ public class Point{
     double square = Math.pow(other.getX() - Point.getX(),2) + Math.pow(other.getY() - Point.getY(),2);
     double answer = Math.sqrt(square);
     return answer;
-  }
+}
 
   /*
   Write this method last. Re-use (NOT COPY/PASTE) prior work and
