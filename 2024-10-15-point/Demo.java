@@ -19,7 +19,13 @@ public class Demo{
     System.out.println( Point.distance(p1,p2));
     System.out.println( p1.distanceTo(p2));
     Point p4 = new Point(0,0);
-    Point p5 = new Point(0.5,Math.sqrt(3));
+    Point p5 = new Point(0.5, 0.5 * Math.sqrt(3));
     Point p6 = new Point(1, 0);
+    System.out.println(p4);
+    System.out.println(p5);
+    System.out.println(p6);
+    System.out.println("Distance from p4 to p5: " + distance(p4,p5));
+    System.out.println("Distance from p5 to p6: " + Point.distance(p5,p6));
+    System.out.println("Distance from p4 to p6: " + p4.distanceTo(p6));
   }
 }
