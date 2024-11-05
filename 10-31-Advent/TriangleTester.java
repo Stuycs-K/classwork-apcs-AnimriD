@@ -7,15 +7,19 @@ public class TriangleTester {
   }
   public static int countTrianglesA(String filename) {
     //File file = new File(filename);
-    Scanner input = new Scanner (filename);
+    Scanner input = new Scanner (new File(filename));
     int count = 0;
     while (input.hasNextLine()) {
       String line = input.nextLine();
       String[]nums = line.split(" ");
-      for (int y = 0; y < nums.length; y++) {
-      if (validTri(Integer.parseInt(nums[y]), Integer.parseInt(nums[y] + 1), Integer.parseInt(nums[y] + 2))) {
-        count++;
-      }
+      for (int y = 0; y < nums.length - 2; y++) {
+        int a = Integer.parseInt(nums[y]);
+        int b = Integer.parseInt(nums[y+1]);
+        int c = Integer.parseInt(nums[y+2]);
+
+        if (validTri(Integer.parseInt(nums[y]), Integer.parseInt(nums[y] + 1), Integer.parseInt(nums[y] + 2))) {
+            count++;
+        }
     }
   }
   input.close();
