@@ -7,8 +7,9 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       while (input.hasNext()) {
-        if(input.next().equals("{")){
-          input.close();
+		  String line = input.nextLine();
+        if(line.indexOf("{") > -1){
+			System.out.println(line);
         }
       }
       input.close();//releases the file from your program
