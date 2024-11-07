@@ -24,6 +24,9 @@ public class Animal {
     System.out.println("I say " + getNoise());
   }
 
+  public int getAge(){
+    return age;
+  }
   public String getName(){
     return name;
   }
