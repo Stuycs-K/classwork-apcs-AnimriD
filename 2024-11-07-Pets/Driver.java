@@ -1,6 +1,9 @@
 // When calling the speak method on a Bird object
 // the words "The Mighty" was added before the name of the object
 // calling speak on animal objects remained the same with no "The Mighty".
+/* This shows that you can not store an animal in a bird.
+  This is because in order to construct Bird in the subclass,
+  you need more variables than you would in the Animal class, meaning you can't construct the bird. */
 public class Driver{
   public static void main (String []args) {
     Animal a = new Animal("meow", 8, "kitty");
