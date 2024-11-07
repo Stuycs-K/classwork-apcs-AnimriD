@@ -7,5 +7,9 @@ public class Driver{
     a.speak();
     Bird birdie = new Bird("caw", 4, "bald eagle", 200, "brown");
     birdie.speak();
+    Animal a1 = new Animal("hello", 16, "human");
+    Bird b1 = new Bird("cawcaw", 7, "falcon", 70, "brown");
+    //Bird b2 = new Animal("rawr", 200, "lion");
+    Animal a2 = new Bird("squeak", 24, "pigeon", 100, "grey");
   }
 }
