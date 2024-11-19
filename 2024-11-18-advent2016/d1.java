@@ -14,23 +14,27 @@ public class d1{
 
       ArrayList<String> data;
       data = new ArrayList<String>();
+      ArrayList<Integer> data1;
+      data1 = new ArrayList<Integer>();
       while(input.hasNext()){
         data.add(input.next());
       }
 
       int[][] nice = new int[][]{{1,0}, {0,-1}, {-1,0}, {0,1}};
-
       for(int j = 0; j < data.size(); j++){
-        if(data.get(j).substring(0,1).equals("R")){
+        String temp = data.get(j);
+        if(temp.charAt(0) == 'R'){
           orientation = (orientation + 1) % 4;
         }
-        if(data.get(j).substring(0,1).equals("L")){
+        if(temp.charAt(0) == 'L'){
           orientation = (orientation - 1 + 4) % 4;
         }
-        x += parseInt(data.get(j).substring(2)) * nice[orientation][0];
-        y += parseInt(data.get(j).substring(2)) * nice[orientation][1];
+        int distance = Integer.parseInt(temp.substring(1));
+        x += distance * nice[orientation][0];
+        y += distance * nice[orientation][1];
       }
       return Math.abs(x) + Math.abs(y);
+
     }catch(FileNotFoundException ex){
       System.out.println("File not found");
       return 0;
