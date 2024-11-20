@@ -18,35 +18,7 @@ public class d2{
                 int j = 5;
                 for(int y = 0; y < newer.get(x).length(); y++){
                     if (newer.get(x).charAt(y) == 'L'){
-                        if(j - 1 <= 0){
-                            y++;
-                        }
-                        else{
-                            j = j - 1;
-                        }
-                    }
-                    if(newer.get(x).charAt(y) == 'R'){
-                        if(j++ >= 10){
-                            y++;
-                        }else{
-                            j++;
-                        }
-                    }
-                    if(newer.get(x).charAt(y) == 'U'){
-                        if(j - 3 <= 0){
-                            y++;
-                        }else{
-                            j = j - 3;
-                        }
-                    }
-                    if(newer.get(x).charAt(y) == 'D'){
-                        if(j + 3 >= 10){
-                            y++;
-                        }
-                        else{
-                            j = j + 3;
-                        }
-                    }
+                        if(!
                 }
                 returnable += j;
             }
@@ -60,4 +32,5 @@ public class d2{
     public static void main(String[] args){
         System.out.println(d2("d2_2016.txt"));
     }
+}
 }
