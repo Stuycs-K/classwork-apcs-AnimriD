@@ -18,12 +18,31 @@ public class d2{
                 int j = 5;
                 for(int y = 0; y < newer.get(x).length(); y++){
                     if (newer.get(x).charAt(y) == 'L'){
-                        if(!
+                        if(!(j % 3 == 1)) {
+                          j--;
+                        }
+                      }
+                   if (newer.get(x).charAt(y) == 'R'){
+                     if(!(j % 3 == 0)){
+                       j++;
+                     }
+                   }
+                   if (newer.get(x).charAt(y) == 'U'){
+                     if(!(j <= 3)) {
+                       j = j - 3;
+                     }
+                   }
+                   if(newer.get(x).charAt(y) == 'D'){
+                     if(!(j >= 7)) {
+                       j = j + 3;
+                     }
+                   }
                 }
                 returnable += j;
             }
             return Integer.parseInt(returnable);
-        }catch(FileNotFoundException ex){
+        }
+        catch(FileNotFoundException ex){
             System.out.println("File not found");
             return 0;
         }
@@ -32,5 +51,6 @@ public class d2{
     public static void main(String[] args){
         System.out.println(d2("d2_2016.txt"));
     }
-}
+
+
 }
