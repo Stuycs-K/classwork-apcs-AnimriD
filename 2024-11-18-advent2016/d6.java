@@ -11,10 +11,10 @@ public class d6{
             counter[y - 'a']++;  
         }
         char most = 'a';
-        int maxFrequency = 0;
+        int maxFrequency = 26;
         int place = 0;
         for(int x = 0; x < counter.length; x++){
-            if (counter[x] > maxFrequency){
+            if (counter[x] < maxFrequency){
                 maxFrequency = counter[x];
                 most = (char) ('a' + x);
             }
