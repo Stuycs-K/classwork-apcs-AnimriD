@@ -28,8 +28,16 @@ public abstract class Warrior extends Adventurer{
     other.HP = other.HP - j;
     String returnable = "" + other.getName() + "was dealt " + j + "damage. ";
     if(other.HP <= 0){
-      returnable += other.getName() + " is now dead."
+      returnable += other.getName() + " is now dead.";
     }
+    return returnable;
+  }
+  public String support(Adventurer other){
+    Random rand = Random();
+    int j = rand.nextInt(this.getSpecial() + 1);
+    other.HP = other.HP + j;
+    this.HP = this.HP - j;
+    String returnable = "" + this.getName() + " gave " + other.getName() + " " + j + " amt of HP";
     return returnable;
   }
 
