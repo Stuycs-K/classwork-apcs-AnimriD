@@ -51,4 +51,12 @@ public abstract class Warrior extends Adventurer{
     return "Self healed";
   }
 
+  public String specialAttack(Adventurer.other){
+    Random rand = Random();
+    int j = rand.nextInt(this.swords + 1);
+    other.setHP(other.HP - j);
+    this.swords = this.swords - j;
+    return "Attacked " + other.getName(); + "with" + j + "damage";
+  }
+
 }
