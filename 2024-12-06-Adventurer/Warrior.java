@@ -23,9 +23,9 @@ public abstract class Warrior extends Adventurer{
     return super.restoreSpecial(n);
   }
   public String attack(Adventurer other){
-    Random rand = Random();
+    Random rand = new Random();
     int j = rand.nextInt(this.getSpecial() + 1);
-    other.HP = other.HP - j;
+    other.setHP() = other.getHP() - j;
     String returnable = "" + other.getName() + "was dealt " + j + "damage. ";
     if(other.HP <= 0){
       returnable += other.getName() + " is now dead.";
@@ -33,30 +33,30 @@ public abstract class Warrior extends Adventurer{
     return returnable;
   }
   public String support(Adventurer other){
-    Random rand = Random();
+    Random rand = new Random();
     int j = rand.nextInt(this.getSpecial() + 1);
-    other.HP = other.HP + j;
-    this.HP = this.HP - j;
+    other.setHP() = other.getHP() + j;
+    this.setHP() = this.getHP() - j;
     String returnable = "" + this.getName() + " gave " + other.getName() + " " + j + " amt of HP";
     return returnable;
   }
 
   public String support(){
-    Random rand = Random();
+    Random rand = new Random();
     int j = rand.nextInt(this.HP + 1);
-    this.HP = this.HP + j;
-    if(this.HP > this.maxHP){
-      this.HP = this.maxHP;
+    this.setHP() = this.getHP() + j;
+    if(this.getHP() > this.getmaxHP()){
+      this.setHP() = this.setmaxHP();
     }
     return "Self healed";
   }
 
-  public String specialAttack(Adventurer.other){
-    Random rand = Random();
-    int j = rand.nextInt(this.swords + 1);
-    other.setHP(other.HP - j);
+  public String specialAttack(Adventurer other){
+    Random rand = new Random();
+    int j = rand.nextInt(this.getSpecial() + 1);
+    other.setHP(other.getHP() - j);
     this.swords = this.swords - j;
-    return "Attacked " + other.getName(); + "with" + j + "damage";
+    String returnable = "" + this.getName() + "attacked" + other.getName() + "with " + j;
+    return returnable;
   }
-
 }
