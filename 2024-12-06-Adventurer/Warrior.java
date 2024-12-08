@@ -41,4 +41,14 @@ public abstract class Warrior extends Adventurer{
     return returnable;
   }
 
+  public String support(){
+    Random rand = Random();
+    int j = rand.nextInt(this.HP + 1);
+    this.HP = this.HP + j;
+    if(this.HP > this.maxHP){
+      this.HP = this.maxHP;
+    }
+    return "Self healed";
+  }
+
 }
