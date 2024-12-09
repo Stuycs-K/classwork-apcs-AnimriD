@@ -17,7 +17,7 @@ public abstract class Warrior extends Adventurer{
     this.swords = n;
   }
   public int getSpecialMax(){
-    return 1000;
+    return 100;
   }
   public int restoreSpecial(int n){
     return super.restoreSpecial(n);
