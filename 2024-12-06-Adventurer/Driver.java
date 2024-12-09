@@ -1,10 +1,10 @@
 import java.util.Random;
 public class Driver{
-    public static void main(String[] args){}
-        Adventurer w1 = new Warrior("Max", 15);
+    public static void main(String[] args){        
+        Adventurer w1 = new Warrior("Max", 15) {};
         System.out.println(w1.getHP());
         System.out.println(w1.getmaxHP());
-        Adventurer w2 = new Warrior("Lando", 14);
+        Adventurer w2 = new Warrior("Lando", 14) {};
         System.out.println(w2.getHP());
         System.out.println(w2.getmaxHP());
         w1.getSpecial();
@@ -17,4 +17,5 @@ public class Driver{
         System.out.println(w2.support());
         System.out.println(w2.getHP());
         System.out.println(w1.specialAttack(w2));
+    }
 }

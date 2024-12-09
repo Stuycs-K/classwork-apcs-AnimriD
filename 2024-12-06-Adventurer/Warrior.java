@@ -25,9 +25,9 @@ public abstract class Warrior extends Adventurer{
   public String attack(Adventurer other){
     Random rand = new Random();
     int j = rand.nextInt(this.getSpecial() + 1);
-    other.setHP() = other.getHP() - j;
+    other.setHP(other.getHP() - j);
     String returnable = "" + other.getName() + "was dealt " + j + "damage. ";
-    if(other.HP <= 0){
+    if(other.getHP() <= 0){
       returnable += other.getName() + " is now dead.";
     }
     return returnable;
@@ -35,18 +35,18 @@ public abstract class Warrior extends Adventurer{
   public String support(Adventurer other){
     Random rand = new Random();
     int j = rand.nextInt(this.getSpecial() + 1);
-    other.setHP() = other.getHP() + j;
-    this.setHP() = this.getHP() - j;
+    other.setHP(other.getHP() + j);
+    this.setHP(this.getHP() - j);
     String returnable = "" + this.getName() + " gave " + other.getName() + " " + j + " amt of HP";
     return returnable;
   }
 
   public String support(){
     Random rand = new Random();
-    int j = rand.nextInt(this.HP + 1);
-    this.setHP() = this.getHP() + j;
+    int j = rand.nextInt(this.getHP() + 1);
+    this.setHP(this.getHP() + j);
     if(this.getHP() > this.getmaxHP()){
-      this.setHP() = this.setmaxHP();
+      this.setHP(this.getmaxHP());
     }
     return "Self healed";
   }
