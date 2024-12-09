@@ -7,9 +7,10 @@ public class Game{
     player.setSpecial(rand.nextInt(player.getSpecialMax()));
     Adventurer opps = new CodeWarrior("Joe", 15);
     System.out.println("" + player.getName() + ", " + player.getHP() + "/" + player.getmaxHP() + "HP, " + player.getSpecial() + "/" + player.getSpecialMax() + player.getSpecialName());
-    System.out.println("" + opps.getName() + ", " + opps.getHP() + "/" + opps.getmaxHP() + ", " + opps.getSpecial() + "/" + opps.getSpecialMax() + opps.getSpecialName());
+    System.out.println("" + opps.getName() + ", " + opps.getHP() + "/" + opps.getmaxHP() + "HP, " + opps.getSpecial() + "/" + opps.getSpecialMax() + opps.getSpecialName());
     System.out.println("Type: (a)ttack/ (sp)ecial/ (su)pport/ quit");
     Scanner userInput = new Scanner(System.in);
-
+    String input = userInput.nextLine();
+    if(input.equals("a") || input.next
   }
 }
