@@ -26,7 +26,7 @@ public abstract class Warrior extends Adventurer{
     Random rand = new Random();
     int j = rand.nextInt(this.getSpecial() + 1);
     other.setHP(other.getHP() - j);
-    String returnable = "" + other.getName() + "was dealt " + j + "damage. ";
+    String returnable = "" + other.getName() + " was dealt " + j + "damage. ";
     if(other.getHP() <= 0){
       returnable += other.getName() + " is now dead.";
     }
@@ -56,7 +56,7 @@ public abstract class Warrior extends Adventurer{
     int j = rand.nextInt(this.getSpecial() + 1);
     other.setHP(other.getHP() - j);
     this.swords = this.swords - j;
-    String returnable = "" + this.getName() + "attacked" + other.getName() + "with " + j;
+    String returnable = "" + this.getName() + " attacked " + other.getName() + " with " + j;
     return returnable;
   }
 }
